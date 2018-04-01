@@ -1,0 +1,25 @@
+[parity]
+chain = "/root/config/gomet.json"
+base_path = "/root/.local/share/io.parity.ethereum/"
+
+[rpc]
+port = 8545
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+
+[ui]
+port = 8180
+
+[websockets]
+port = 8546
+
+[account]
+password = ["/root/config/node.pwds"]
+
+[network]
+id = 1714
+bootnodes = ["enode://74adec9e8856441ad23131e5fcd81270088060afe327bc59d21225c1c0bb2e866d4b96441ad6d65498a17941e598817d47def05bec911c406f74d5c79cff8150@parity2:30303","enode://360a6336a49d32aa92ddcf1f9328bbc289c54716c029f2fcb0e7fa9290b8f997aa4bec45351506c08087038e3c1e7503c31c59b104bd097cf26dad0544007d7a@parity3:30303"]
+
+[mining]
+engine_signer = "0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2"
+reseal_on_txs = "none"
+force_sealing = true

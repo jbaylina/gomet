@@ -1,0 +1,38 @@
+version: "3"
+services:
+  parity1:
+    image: parity/parity:v1.9.2
+    entrypoint: /root/config/entrypoint.sh
+    command: /parity/parity --config /root/config/p1.toml --jsonrpc-apis all --jsonrpc-hosts all --ui-hosts=all --jsonrpc-interface all --ui-interface all --ws-interface all --ui-no-validation --unsafe-expose
+    volumes:
+      - ./config:/root/config
+      - ./data/p1:/root/.local/share/io.parity.ethereum/
+    ports:
+      - 8545:8545
+      - 8546:8546
+      - 8180:8180
+    environment:
+      NODEID: "1"
+  parity2:
+    image: parity/parity:v1.9.2
+    entrypoint: /root/config/entrypoint.sh
+    command: /parity/parity --config /root/config/p2.toml
+    volumes:
+      - ./config:/root/config
+      - ./data/p2:/root/.local/share/io.parity.ethereum/
+    environment:
+      NODEID: "2"
+  parity3:
+    image: parity/parity:v1.9.2
+    entrypoint: /root/config/entrypoint.sh
+    command: /parity/parity --config /root/config/p3.toml
+    volumes:
+      - ./config:/root/config
+      - ./data/p3:/root/.local/share/io.parity.ethereum/
+    environment:
+      NODEID: "3"
+
+
+
+
+

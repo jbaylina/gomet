@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "url": "enode://360a6336a49d32aa92ddcf1f9328bbc289c54716c029f2fcb0e7fa9290b8f997aa4bec45351506c08087038e3c1e7503c31c59b104bd097cf26dad0544007d7a@172.18.0.3:30303",
+      "attempts": 3,
+      "failures": 3
+    }
+  ]
+}
