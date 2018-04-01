@@ -20,6 +20,7 @@ contract ValidatorSetChild is AtomicMultisig {
     function finalizeChange() public {
         require(msg.sender == SYSTEM_ADDRESS);
         doChangeValidators(pendingList);
+        changingValidators = false;
         delete(pendingList);
     }
 
